@@ -4,7 +4,7 @@ import logoSm from '../../../assets/svg/summit-sm.svg'
 const Sidebar = () => {
   return (
     <s.Sidebar>
-      <s.SideLogo><source media='(min-width:768px)' srcSet={logo}/><img src={logoSm}/></s.SideLogo>
+      <s.SideLogo><source media='(min-width:768px)' srcSet={logo}/><img src={logoSm} alt="Summit Logo"/></s.SideLogo>
       <s.PageSection>
         <s.PageLink to="/dashboard/dashboard">
           <span><svg strokeWidth="0" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M496 496H16V16h32v448h448v32z"></path><path d="M192 432H80V208h112zm144 0H224V160h112zm143.64 0h-112V96h112z"></path></svg></span><span>Dashboard</span>
