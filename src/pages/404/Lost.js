@@ -10,8 +10,8 @@ const Lost = () => {
     
     <s.Background>
       <s.GpsContainer>
-        <s.GpsScreen><img src={map}/></s.GpsScreen>
-        <s.Gps src={gps}/>
+        <s.GpsScreen><img src={map} alt="map"/></s.GpsScreen>
+        <s.Gps src={gps} alt="gps"/>
       </s.GpsContainer>
       <s.MessageContainer>
         <s.Message>
