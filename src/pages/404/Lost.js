@@ -1,6 +1,6 @@
 import * as s from './styles'
 import {Link, useNavigate} from 'react-router-dom'
-import map from '../../assets/img/map.png'
+import map from '../../assets/img/map.webp'
 import gps from '../../assets/svg/gps.svg'
 import { InvisButton } from '../../components/Buttons/Button'
 const Lost = () => {
