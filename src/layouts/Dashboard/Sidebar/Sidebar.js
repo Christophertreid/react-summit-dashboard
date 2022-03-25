@@ -1,16 +1,11 @@
-import { auth } from 'libs/firebase'
-import { signOut } from 'firebase/auth'
 
 import * as s from './styles'
 import logo from '../../../assets/svg/summit-med.svg'
 import logoSm from '../../../assets/svg/summit-sm.svg'
 import ProductOptions from './ProductOptions'
-import { Button } from 'components/Buttons/Button'
+
 const Sidebar = () => {
   
-  function onLogout(e){
-    signOut(auth);
-  }
   return (
     <s.Sidebar>
       <s.SideLogo><source media='(min-width:768px)' srcSet={logo}/><img src={logoSm} alt="Summit Logo"/></s.SideLogo>

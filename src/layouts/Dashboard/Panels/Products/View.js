@@ -1,7 +1,7 @@
 import * as s from './styles'
 import ProductCard from 'components/Cards/Card';
 import tent from 'assets/img/tent.jpg'
-const Panel = ({title, ... props}) => {
+const Panel = ({title, ...props}) => {
   return (
     <s.Panel>
       <s.PanelSection>

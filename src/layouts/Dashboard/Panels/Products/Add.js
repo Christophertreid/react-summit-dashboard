@@ -1,6 +1,6 @@
 import * as s from './styles'
-import { Route, Routes } from 'react-router-dom'
-const Panel = ({title, ... props}) => {
+
+const Panel = ({title, ...props}) => {
   return (
     <s.Panel>
       <s.PanelSection>
