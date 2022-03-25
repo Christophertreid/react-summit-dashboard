@@ -16,7 +16,7 @@ const Button = styled.button`
 const InvisButton = styled.button`
   border: none;
   background: none;
-  color: inherit;
+  color: ${({theme})=> theme.colors.white};
 `
 
 export {Button, InvisButton};

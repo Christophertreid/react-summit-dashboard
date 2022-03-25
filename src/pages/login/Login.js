@@ -7,9 +7,9 @@ import{ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import logo from '../../assets/svg/summit-lrg.svg'
-import Form from '../../components/form/Form'
-import Label from '../../components/form/labels/Label'
-import TextInput from '../../components/form/inputs/TextInput'
+import Form from '../../components/Forms/Form'
+import Label from '../../components/Forms/labels/Label'
+import TextInput from '../../components/Forms/inputs/TextInput'
 import {Button} from '../../components/Buttons/Button'
 import * as s from './styles'
 
@@ -36,7 +36,7 @@ const LoginForm = () => {
     signInWithEmailAndPassword(auth, email, password)
     .then(userCredential =>{
       //match
-      navigate('/dashboard/dashboard');
+      navigate('/dashboard');
 
     })
     .catch(error =>{

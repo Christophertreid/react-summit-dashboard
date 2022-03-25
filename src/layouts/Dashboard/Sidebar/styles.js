@@ -14,42 +14,61 @@ background: bottom center no-repeat url(${trees}), ${({theme})=> theme.colors.su
   width: 217px;
 }
 `
+
 const PageLink = styled(Link)`
 display: flex;
+align-items: center;
 gap: 1rem;
 padding: 0.5rem 0;
 color: ${({theme})=> theme.colors.white};
-&:hover{
-  text-decoration: underline;
-  cursor: pointer;
-}
-span:last-child{
-  display: none;
-}
-span svg{
-  width: 2rem;
-  height: 2rem;
-  fill: ${({theme})=> theme.colors.white};
-}
-@media screen and (min-width: 768px){
-  margin-left: 1.5rem;
+border-radius: 0.25rem;
+  
+  span{
+    display: flex;
+    gap: 1rem;
+  }
   span:last-child{
-  display: block;
+    display: none;
   }
   span svg{
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
+    fill: ${({theme})=> theme.colors.white};
+  }
+  @media screen and (min-width: 768px){
+    margin-left: 1.5rem;
+    span:last-child{
+    display: block;
+    }
+    span svg{
+      width: 1rem;
+      height: 1rem;
+    }
+    &:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    background-color: ${({theme})=> theme.colors.ltBlue};
   }
 }
-`
+`;
+const LinkSection = styled.div`
+  display: ${(props) => props.view ? 'block' : 'none'};
+  border-radius: 0.25rem;
+  @media screen and (min-width: 768px){
+  ${PageLink} {
+    padding-left: 2rem;
+  }
+}
+`;
 const PageSection = styled.div`
 width: 100%;
 border-bottom: 1px solid ${({theme})=> theme.colors.white};
 `
+
 const SideLogo = styled.picture`
 position: absolute;
 top: 0;
 left: 50%;
 transform: translate(-50%, -50%);
 `
-export {Sidebar, PageLink, PageSection, SideLogo}
+export {Sidebar, PageLink, PageSection, SideLogo, LinkSection}
