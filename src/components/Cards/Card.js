@@ -1,6 +1,6 @@
 import * as s from './styles'
 
-const ProductCard = ({title, price, sku, category, manufacturer, img, description, ... props}) => {
+const ProductCard = ({title, price, sku, category, manufacturer, img, description, ...props}) => {
   return (
 <s.ProductCard>
   <s.ProductWindow src = {img} alt={title}/>
