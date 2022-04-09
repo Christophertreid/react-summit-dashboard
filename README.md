@@ -1,29 +1,30 @@
 # SUMMIT Outdoor Supplies Dashboard
 
 ## Description
-The SUMMIT Dashboard will be a one stop shop for retail management of the SUMMIT outdoor supplies online retail arm. As additional features are built out, the dashboard will be able to generate real-time displays of useful business data. Additionally, order and customer information will be tracked. The current functionality includes a login page, custom 404 page, and dashboard template. The dashboard will
-eventually be linked to the retail side of the website.
+The SUMMIT Dashboard will be a one stop shop for retail management of the SUMMIT outdoor supplies online retail arm. As additional features are built out, the dashboard will be able to generate real-time displays of useful business data. Additionally, order and customer information will be tracked. The current functionality includes a login page, custom 404 page, and dashboard template. The dashboard defaults to a product view panel. Newly added functionality includes a product add panel which allows the addition and live preview of products for inclusion in the database.
 
 ## Current Work
-- Product Card built out
-- routing is now protected
-- dashboard panels are nested
+- ProductEditor built out and added to Add Products Panel
+- Upload confirmation added
+- View Products now pulls product data from the database and dynamically renders the product cards
 ## Future Work
-- updates to add additional functionality for adding products
+- adding edit and delete functionality to product card buttons
+- updates to add additional functionality for editing existing products
 - payment services
 - retail (customer-facing) side of the website
 
 ## Current Pages
-![image](https://user-images.githubusercontent.com/65042664/158004106-3636684a-2630-4161-b031-4bf0d03ad5d9.png)
-Login page
+![image](https://user-images.githubusercontent.com/65042664/162557015-917975b4-40a9-4a14-8e15-3561b69bb9d2.png)
+View Products Page
 
-![image](https://user-images.githubusercontent.com/65042664/158004113-0edf62de-c299-42dc-bbf1-2d074b678585.png)
-404 page
+![image](https://user-images.githubusercontent.com/65042664/162557054-40419037-abe3-46ab-9f9c-b33d451bcf8e.png)
+Add products page
 
-![image](https://user-images.githubusercontent.com/65042664/160213278-7bda0c3d-eceb-4bda-a51e-ffc594c3936c.png)
-Revised Dashboard template with additional product pages 
+![image](https://user-images.githubusercontent.com/65042664/162557067-d67e72c0-264f-40e7-aaf6-2605263b01c5.png)
+Upload confirmation page
 
 ### Dependencies
+React Dropzone is used for image upload.
 Firebase is used for authentication and will be used for the database/storage.
 React-Toastify messages are used for error message handling.
 Styled Components are used for styling.
