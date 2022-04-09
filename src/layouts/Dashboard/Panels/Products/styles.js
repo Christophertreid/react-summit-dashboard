@@ -33,7 +33,7 @@ const Body = styled.div
   height: calc(100% - 3rem);
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: start;
   overflow-y: scroll;
   color: ${({theme})=> theme.colors.charcoal};
