@@ -20,8 +20,8 @@ span:last-child{
 `;
 
 const ProductCard = styled.section`
-  width: 16rem;
-  height: fit-content;
+  width: 20rem;
+  height: 38.5rem;
   padding: 1rem;
   margin: 1rem;
   box-shadow: 0px 0px 2px 2px ${({theme})=> theme.colors.ltGrey};
