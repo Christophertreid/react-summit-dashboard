@@ -1,13 +1,20 @@
 import * as s from './styles'
+import { Button } from 'components/Buttons/Button';
+const ProductCard = ({children, product, ...props}) => {
+  const {productName, productPrice, uid, productCategory, productManufacturer, imgURL, productDescription} = {...product}
 
-const ProductCard = ({title, price, sku, category, manufacturer, img, description, ...props}) => {
+  function cutUID (string, limit){
+    return string.substring(1, limit)
+  }
   return (
 <s.ProductCard>
-  <s.ProductWindow src = {img} alt={title}/>
-  <s.Details><span>{category}</span> <span>{sku}</span></s.Details>
-  <s.Name>{title}</s.Name>
-  <s.Details><span>${(price/100).toFixed(2)}</span> <span>{manufacturer}</span></s.Details>
-  <s.Description>{description}</s.Description>
+  <s.ProductWindow><img src = {imgURL} alt={productName} /></s.ProductWindow>
+  <s.Details><span>{productCategory}</span><span>{cutUID(uid, 10)}</span></s.Details>
+  <s.Name>{productName}</s.Name>
+  <s.Details><span>${productPrice}</span> <span>{productManufacturer}</span></s.Details>
+  <s.Description>{productDescription}</s.Description>
+  <Button>Edit</Button>
+  <Button>Delete</Button>
 </s.ProductCard>
   );
 };

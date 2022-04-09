@@ -1,7 +1,11 @@
+import {useGetAllProducts} from 'hooks/useGetAllProducts';
 import * as s from './styles'
 import ProductCard from 'components/Cards/Card';
-import tent from 'assets/img/tent.jpg'
+
 const Panel = ({title, ...props}) => {
+
+  const productData = useGetAllProducts()
+
   return (
     <s.Panel>
       <s.PanelSection>
@@ -9,49 +13,7 @@ const Panel = ({title, ...props}) => {
           <h1>{title || "Panel" }</h1>
         </s.Header>
         <s.Body>
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          <ProductCard img = {tent} title="MSR Hubba Hubba" category="TENT" sku="123456" price={49900} manufacturer="MSR"
-            description="A one person backing tent perfect for the solo traveler."
-          />
-          
+          {productData? productData.map(product =><ProductCard key={product.uid} product={product}/>) : <p>Products loading...</p>}
         </s.Body>
         <s.Footer>
           {/*Pagination */}
